@@ -1,0 +1,17 @@
+"""
+https://www.urionlinejudge.com.br/judge/pt/problems/view/1172
+
+Faça um programa que leia um vetor X[10]. Substitua a seguir, todos os valores nulos e negativos do vetor X por 1. Em seguida mostre o vetor X.
+"""
+
+
+
+z = 0
+X = [int(input()) for i in range(10)]
+
+for i in X:
+  if i <= 0:
+    i = 1 
+  print("X[{}] = {}".format(z, i))
+  z += 1
+  
