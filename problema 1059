@@ -1,0 +1,24 @@
+"""
+https://www.urionlinejudge.com.br/judge/pt/problems/view/1071
+
+Leia 2 valores inteiros X e Y. A seguir, calcule e mostre a soma dos números impares entre eles.
+"""
+
+
+
+a = int(input())
+b = int(input())
+s = 0
+
+
+if a > b:
+  for num in range(b+1,a):
+    if num % 2 == 1:
+      s += num
+
+elif a < b:
+  for num in range(a+1,b):
+    if num % 2 == 1:
+      s += num
+
+print(s)
