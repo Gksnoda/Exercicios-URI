@@ -1,0 +1,25 @@
+"""
+https://www.urionlinejudge.com.br/judge/pt/problems/view/1177
+
+Faça um programa que leia um valor T e preencha um vetor N[1000] com a sequência de valores de 0 até T-1 repetidas vezes, conforme exemplo abaixo. Imprima o vetor N.
+"""
+
+
+
+import os
+
+os.system('clear')
+
+T = int(input())
+n = 0
+x = []
+
+while n < 1000:
+  for i in range(0, T):
+    x.append(i)
+    n += 1
+    if n > 999:
+      break
+
+for i in range(0, 1000):
+  print("N[{}] = {}".format(i, x[i]))
