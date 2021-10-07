@@ -1,0 +1,26 @@
+"""
+https://www.urionlinejudge.com.br/judge/pt/problems/view/1176
+
+Faça um programa que leia um valor e apresente o número de Fibonacci correspondente a este valor lido.
+Lembre que os 2 primeiros elementos da série de Fibonacci são 0 e 1 e cada próximo termo é a soma dos 2 anteriores a ele.
+Todos os valores de Fibonacci calculados neste problema devem caber em um inteiro de 64 bits sem sinal.
+"""
+
+
+
+X = int(input())
+n = 0
+
+while n != X:
+  z = [0, 1]
+  c = 2
+  i = int(input())
+  if i == 0 or i == 1:
+    print("Fib({}) = {}".format(i, z[i]))
+    n += 1
+    continue
+  while c <= i:
+    z.append((z[c-2]+z[c-1]))
+    c += 1
+  print("Fib({}) = {}".format(i, z[i]))
+  n += 1
