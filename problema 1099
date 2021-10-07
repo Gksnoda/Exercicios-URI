@@ -1,0 +1,28 @@
+"""
+https://www.urionlinejudge.com.br/judge/pt/problems/view/1099
+
+Leia um valor inteiro N que é a quantidade de casos de teste que vem a seguir.
+Cada caso de teste consiste de dois inteiros X e Y. Você deve apresentar a soma de todos os ímpares existentes entre X e Y.
+"""
+
+
+
+n = int(input())
+
+while n != 0:
+
+  a, b = map(int, input().split())
+
+  s = 0
+  if a > b:
+    for num in range(b+1,a):
+      if num % 2 == 1:
+        s += num
+
+  elif a < b:
+    for num in range(a+1,b):
+      if num % 2 == 1:
+        s += num
+  print(s)
+  n -= 1
+  
