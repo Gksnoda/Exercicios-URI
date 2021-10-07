@@ -1,0 +1,20 @@
+"""
+https://www.urionlinejudge.com.br/judge/pt/problems/view/1133
+
+Escreva um programa que leia 2 valores X e Y e que imprima todos os valores entre eles cujo resto da divisão dele por 5 for igual a 2 ou igual a 3.
+"""
+
+
+
+a = int(input())
+b = int(input())
+
+if a > b:
+  for num in range(b+1, a):
+    if num % 5 == 2 or num % 5 == 3:
+      print(num)
+
+elif a < b:
+  for num in range(a+1, b):
+    if num % 5 == 2 or num % 5 == 3:
+      print(num)
