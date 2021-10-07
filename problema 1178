@@ -1,0 +1,24 @@
+"""
+https://www.urionlinejudge.com.br/judge/pt/problems/view/1178
+
+Leia um valor X. Coloque este valor na primeira posição de um vetor N[100].
+Em cada posição subsequente de N (1 até 99), coloque a metade do valor armazenado na posição anterior, conforme o exemplo abaixo. Imprima o vetor N.
+"""
+
+
+
+import os
+
+os.system('clear')
+
+T = float(input())
+n = 0
+x = [T]
+
+for i in range(1, 100):
+  x.append(T/2)
+  T = T/2
+
+
+for i in range(0, 100):
+  print("N[{}] = {:.4f}".format(i, x[i]))
