@@ -1,0 +1,46 @@
+"""
+https://www.urionlinejudge.com.br/judge/pt/problems/view/1048
+
+A empresa ABC resolveu conceder um aumento de salários a seus funcionários de acordo com a tabela abaixo:
+
+
+Salário	Percentual de Reajuste
+0 - 400.00
+400.01 - 800.00
+800.01 - 1200.00
+1200.01 - 2000.00
+Acima de 2000.00
+
+15%
+12%
+10%
+7%
+4%
+
+
+Leia o salário do funcionário e calcule e mostre o novo salário, bem como o valor de reajuste ganho e o índice reajustado, em percentual.
+"""
+
+
+
+a = float(input())
+
+if a <= 400:
+    b = a * 1.15
+    c = 15
+elif a > 400 and a <= 800:
+    b = a * 1.12
+    c = 12
+elif a > 800 and a <= 1200:
+    b = a * 1.10
+    c = 10
+elif a > 1200 and a <= 2000:
+    b = a * 1.07
+    c = 7
+elif a > 2000:
+    b = a * 1.04
+    c = 4
+
+print("Novo salario: {:.2f}".format(b))
+print("Reajuste ganho: {:.2f}".format(b-a))
+print("Em percentual:",c,"%")
