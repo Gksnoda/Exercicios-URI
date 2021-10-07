@@ -1,0 +1,33 @@
+"""
+https://www.urionlinejudge.com.br/judge/pt/problems/view/1181
+
+Neste problema você deve ler um número, indicando uma linha da matriz na qual uma operação deve ser realizada, um caractere maiúsculo,
+indicando a operação que será realizada, e todos os elementos de uma matriz M[12][12].
+Em seguida, calcule e mostre a soma ou a média dos elementos que estão na área verde da matriz, conforme for o caso.
+"""
+
+
+
+L = int(input())
+T = input()
+
+x = []
+z = []
+
+for a in range(12):
+  for i in range(12):
+    z.append(float(input()))
+  x.append(z)
+  z = []
+
+s = 0
+m = 0
+
+if T == 'S' or T == 's':
+  for i in x[L]:
+    s += i
+  print("{:.1f}".format(s))
+elif T == 'M' or T == 'm' :
+  for i in x[L]:
+    m += i
+  print("{:.1f}".format(m / 12))
