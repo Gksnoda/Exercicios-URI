@@ -1,0 +1,7 @@
+Nome = input()
+Fixo = float(input())
+Vendas = float(input())
+
+Total = Fixo + Vendas * 0.15
+
+print("TOTAL = R$ {:.2f}".format(Total))
