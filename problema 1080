@@ -1,0 +1,18 @@
+"""
+https://www.urionlinejudge.com.br/judge/pt/problems/view/1080
+
+Leia 100 valores inteiros. Apresente então o maior valor lido e a posição dentre os 100 valores lidos.
+"""
+
+
+
+x = []
+i = 0
+
+while i < 100:
+    a = int(input())
+    x.append(a)
+    i += 1
+
+print(max(x))
+print(x.index(max(x))+1)
