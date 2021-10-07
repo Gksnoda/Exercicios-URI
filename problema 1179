@@ -1,0 +1,42 @@
+"""
+https://www.urionlinejudge.com.br/judge/pt/problems/view/1179
+
+Neste problema você deverá ler 15 valores colocá-los em 2 vetores conforme estes valores forem pares ou ímpares. Só que o tamanho de cada um dos dois vetores é de 5 posições.
+Então, cada vez que um dos dois vetores encher, você deverá imprimir todo o vetor e utilizá-lo novamente para os próximos números que forem lidos.
+Terminada a leitura, deve-se imprimir o conteúdo que restou em cada um dos dois vetores, imprimindo primeiro os valores do vetor impar.
+Cada vetor pode ser preenchido tantas vezes quantas for necessário.
+"""
+
+
+
+import os
+
+os.system('clear')
+
+n = 0
+i = []
+p = []
+
+
+while n < 15:
+  x = int(input())
+  if x % 2 == 0:
+    p.append(x)
+  else:
+    i.append(x)
+
+  if len(i) ==  5 or n == 14:
+    z = 0
+    for a in i:
+      print("impar[{}] = {}".format(z, a))
+      z += 1
+    i.clear()
+
+  if len(p) == 5 or n == 14:
+    z = 0
+    for a in p:
+      print("par[{}] = {}".format(z, a))
+      z += 1
+    p.clear()
+
+  n += 1
